@@ -1,0 +1,56 @@
+
+# update sphnix files and push back to the git repo
+
+name: sphnix_doc
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Run this workflow'
+
+jobs:
+  sphnix_doc:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -e .
+        pip install -r requirements.txt
+        sudo apt-get install texlive-latex-base
+        sudo apt-get install texlive-latex-extra
+        sudo apt-get install texlive-fonts-recommended 
+        sudo apt-get install texlive-fonts-extra 
+    
+    - name: build sphinx pdf files twice
+      run: |
+        python -m sphinx  -b latex docs latex
+        cd latex
+        pdflatex floodtool.tex
+      continue-on-error: true
+    
+    - name: Git pull
+      run: |
+        git pull
+
+    - name: Update the documents
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+          commit_message: Auto-generated sphinx documentation.

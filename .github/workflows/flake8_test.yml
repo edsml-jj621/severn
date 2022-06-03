@@ -1,0 +1,39 @@
+# This is a basic workflow to help you get started with Actions
+
+name: flake8
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Run this workflow'
+
+jobs:
+  flake8:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install flake8
+    - name: Lint with flake8
+      run: |
+        flake8 flood_tool/tool.py --max-line-length=200
+        flake8 flood_tool/geo.py --max-line-length=200
+        flake8 flood_tool/analysis.py --max-line-length=200
+        flake8 flood_tool/live.py --max-line-length=200
+        flake8 flood_tool/mapping.py --max-line-length=200

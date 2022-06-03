@@ -6,27 +6,27 @@
 \indexentry{get\_easting\_northing() (flood\_tool.Tool method)@\spxentry{get\_easting\_northing()}\spxextra{flood\_tool.Tool method}|hyperpage}{26}
 \indexentry{get\_flood\_class() (flood\_tool.Tool method)@\spxentry{get\_flood\_class()}\spxextra{flood\_tool.Tool method}|hyperpage}{26}
 \indexentry{get\_flood\_class\_methods() (flood\_tool.Tool static method)@\spxentry{get\_flood\_class\_methods()}\spxextra{flood\_tool.Tool static method}|hyperpage}{26}
-\indexentry{get\_flood\_class\_models() (flood\_tool.Tool static method)@\spxentry{get\_flood\_class\_models()}\spxextra{flood\_tool.Tool static method}|hyperpage}{26}
-\indexentry{get\_house\_price\_methods() (flood\_tool.Tool static method)@\spxentry{get\_house\_price\_methods()}\spxextra{flood\_tool.Tool static method}|hyperpage}{26}
+\indexentry{get\_flood\_class\_models() (flood\_tool.Tool static method)@\spxentry{get\_flood\_class\_models()}\spxextra{flood\_tool.Tool static method}|hyperpage}{27}
+\indexentry{get\_house\_price\_methods() (flood\_tool.Tool static method)@\spxentry{get\_house\_price\_methods()}\spxextra{flood\_tool.Tool static method}|hyperpage}{27}
 \indexentry{get\_house\_price\_models() (flood\_tool.Tool static method)@\spxentry{get\_house\_price\_models()}\spxextra{flood\_tool.Tool static method}|hyperpage}{27}
 \indexentry{get\_lat\_long() (flood\_tool.Tool method)@\spxentry{get\_lat\_long()}\spxextra{flood\_tool.Tool method}|hyperpage}{27}
 \indexentry{get\_median\_house\_price\_estimate() (flood\_tool.Tool method)@\spxentry{get\_median\_house\_price\_estimate()}\spxextra{flood\_tool.Tool method}|hyperpage}{27}
-\indexentry{get\_postcode\_from\_sector() (flood\_tool.Tool method)@\spxentry{get\_postcode\_from\_sector()}\spxextra{flood\_tool.Tool method}|hyperpage}{27}
+\indexentry{get\_postcode\_from\_sector() (flood\_tool.Tool method)@\spxentry{get\_postcode\_from\_sector()}\spxextra{flood\_tool.Tool method}|hyperpage}{28}
 \indexentry{get\_total\_value() (flood\_tool.Tool method)@\spxentry{get\_total\_value()}\spxextra{flood\_tool.Tool method}|hyperpage}{28}
 \indexentry{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng()}\spxextra{in module flood\_tool}|hyperpage}{28}
-\indexentry{get\_closest\_station\_ref\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_closest\_station\_ref\_from\_lat\_lng()}\spxextra{in module flood\_tool}|hyperpage}{28}
-\indexentry{get\_easting\_northing\_from\_gps\_lat\_long() (in module flood\_tool)@\spxentry{get\_easting\_northing\_from\_gps\_lat\_long()}\spxextra{in module flood\_tool}|hyperpage}{28}
+\indexentry{get\_closest\_station\_ref\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_closest\_station\_ref\_from\_lat\_lng()}\spxextra{in module flood\_tool}|hyperpage}{29}
+\indexentry{get\_easting\_northing\_from\_gps\_lat\_long() (in module flood\_tool)@\spxentry{get\_easting\_northing\_from\_gps\_lat\_long()}\spxextra{in module flood\_tool}|hyperpage}{29}
 \indexentry{get\_gps\_lat\_long\_from\_easting\_northing() (in module flood\_tool)@\spxentry{get\_gps\_lat\_long\_from\_easting\_northing()}\spxextra{in module flood\_tool}|hyperpage}{29}
-\indexentry{get\_grouped\_reading() (in module flood\_tool)@\spxentry{get\_grouped\_reading()}\spxextra{in module flood\_tool}|hyperpage}{29}
+\indexentry{get\_grouped\_reading() (in module flood\_tool)@\spxentry{get\_grouped\_reading()}\spxextra{in module flood\_tool}|hyperpage}{30}
 \indexentry{get\_rainfall\_classifier\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_rainfall\_classifier\_from\_lat\_lng()}\spxextra{in module flood\_tool}|hyperpage}{30}
 \indexentry{get\_rainfall\_riverlevel\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_rainfall\_riverlevel\_from\_lat\_lng()}\spxextra{in module flood\_tool}|hyperpage}{30}
-\indexentry{get\_station\_data() (in module flood\_tool)@\spxentry{get\_station\_data()}\spxextra{in module flood\_tool}|hyperpage}{30}
-\indexentry{get\_station\_reading() (in module flood\_tool)@\spxentry{get\_station\_reading()}\spxextra{in module flood\_tool}|hyperpage}{30}
+\indexentry{get\_station\_data() (in module flood\_tool)@\spxentry{get\_station\_data()}\spxextra{in module flood\_tool}|hyperpage}{31}
+\indexentry{get\_station\_reading() (in module flood\_tool)@\spxentry{get\_station\_reading()}\spxextra{in module flood\_tool}|hyperpage}{31}
 \indexentry{plot\_24h\_rainfall() (in module flood\_tool)@\spxentry{plot\_24h\_rainfall()}\spxextra{in module flood\_tool}|hyperpage}{31}
-\indexentry{plot\_circle() (in module flood\_tool)@\spxentry{plot\_circle()}\spxextra{in module flood\_tool}|hyperpage}{31}
-\indexentry{plot\_flood\_prob\_level\_with\_given\_postcode() (in module flood\_tool)@\spxentry{plot\_flood\_prob\_level\_with\_given\_postcode()}\spxextra{in module flood\_tool}|hyperpage}{31}
+\indexentry{plot\_circle() (in module flood\_tool)@\spxentry{plot\_circle()}\spxextra{in module flood\_tool}|hyperpage}{32}
+\indexentry{plot\_flood\_prob\_level\_with\_given\_postcode() (in module flood\_tool)@\spxentry{plot\_flood\_prob\_level\_with\_given\_postcode()}\spxextra{in module flood\_tool}|hyperpage}{32}
 \indexentry{plot\_flood\_prob\_sampled() (in module flood\_tool)@\spxentry{plot\_flood\_prob\_sampled()}\spxextra{in module flood\_tool}|hyperpage}{32}
-\indexentry{plot\_heatmap() (in module flood\_tool)@\spxentry{plot\_heatmap()}\spxextra{in module flood\_tool}|hyperpage}{32}
-\indexentry{plot\_house\_price() (in module flood\_tool)@\spxentry{plot\_house\_price()}\spxextra{in module flood\_tool}|hyperpage}{32}
-\indexentry{plot\_house\_price\_sampled() (in module flood\_tool)@\spxentry{plot\_house\_price\_sampled()}\spxextra{in module flood\_tool}|hyperpage}{32}
+\indexentry{plot\_heatmap() (in module flood\_tool)@\spxentry{plot\_heatmap()}\spxextra{in module flood\_tool}|hyperpage}{33}
+\indexentry{plot\_house\_price() (in module flood\_tool)@\spxentry{plot\_house\_price()}\spxextra{in module flood\_tool}|hyperpage}{33}
+\indexentry{plot\_house\_price\_sampled() (in module flood\_tool)@\spxentry{plot\_house\_price\_sampled()}\spxextra{in module flood\_tool}|hyperpage}{33}
 \indexentry{plot\_popping() (in module flood\_tool)@\spxentry{plot\_popping()}\spxextra{in module flood\_tool}|hyperpage}{33}

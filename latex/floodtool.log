@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.17)  17 DEC 2021 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.3)  3 JUN 2022 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,7 +334,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen168
 ))
 (./sphinxlatexliterals.sty
-File: sphinxlatexliterals.sty 2021/01/27 code-blocks and parsed literals
+File: sphinxlatexliterals.sty 2021/12/06 code-blocks and parsed literals
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
@@ -420,16 +420,17 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 (./sphinxlatexnumfig.sty
 File: sphinxlatexnumfig.sty 2021/01/27 numbering
 ) (./sphinxlatexlists.sty
-File: sphinxlatexlists.sty 2021/01/27 lists
+File: sphinxlatexlists.sty 2021/12/20 lists
+\spx@lineitemlabel=\toks27
 )
 \c@sphinxscope=\count280
-\c@sphinxexplicit=\count281
  (./sphinxpackagefootnote.sty
-Package: sphinxpackagefootnote 2021/02/04 v1.1d footnotehyper adapted to sphinx
- (Sphinx team)
+Package: sphinxpackagefootnote 2022/02/12 v4.5.0 Sphinx custom footnotehyper pa
+ckage (Sphinx team)
 \FNH@notes=\box110
-\FNH@toks=\toks27
+\FNH@toks=\toks28
 \FNH@width=\dimen179
+\c@sphinxfootnotemark=\count281
 ) (./sphinxlatexindbibtoc.sty
 File: sphinxlatexindbibtoc.sty 2021/01/27 index, bib., toc
 
@@ -469,18 +470,19 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \aftertitleunit=\skip78
 \ttl@plus=\dimen180
 \ttl@minus=\dimen181
-\ttl@toksa=\toks28
+\ttl@toksa=\toks29
 \titlewidth=\dimen182
 \titlewidthlast=\dimen183
 \titlewidthfirst=\dimen184
 ))
 (./sphinxlatexstyletext.sty
-File: sphinxlatexstyletext.sty 2021/01/27 text styling
+File: sphinxlatexstyletext.sty 2021/12/06 text styling
 ) (./sphinxlatexobjects.sty
-File: sphinxlatexobjects.sty 2021/01/27 documentation environments
-\py@argswidth=\skip79
-\lineblockindentation=\skip80
-\DUlineblockindent=\skip81
+File: sphinxlatexobjects.sty 2022/01/13 documentation environments
+\sphinxsignaturesep=\skip79
+\py@argswidth=\skip80
+\lineblockindentation=\skip81
+\DUlineblockindent=\skip82
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -502,7 +504,7 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen190
 \Gm@layouthoffset=\dimen191
 \Gm@layoutvoffset=\dimen192
-\Gm@dimlist=\toks29
+\Gm@dimlist=\toks30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -623,7 +625,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip82
+\Hy@SectionHShift=\skip83
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
@@ -674,12 +676,12 @@ File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
 \scratchbox=\box113
 \nofMPsegments=\count298
 \nofMParguments=\count299
-\everyMPshowfont=\toks30
+\everyMPshowfont=\toks31
 \MPscratchCnt=\count300
 \MPscratchDim=\dimen198
 \MPnumerator=\count301
 \makeMPintoPDFobject=\count302
-\everyMPtoPDFconversion=\toks31
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -746,19 +748,19 @@ LaTeX Info: Redefining \nameref on input line 69.
 \@outlinefile=\write5
 \openout5 = `floodtool.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 72.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 72
+Package hyperref Info: Option `pageanchor' set `false' on input line 77.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 77
 .
 
 (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -780,8 +782,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 8
-9.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 9
+4.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 ) [3] [4
@@ -789,27 +791,27 @@ File: t1txtt.fd 2000/12/15 v3.1
 ]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 []\T1/qtm/m/n/10 -t, ^^Ula-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 []\T1/qtm/m/n/10 -f post-
  []
 
 
-Overfull \hbox (2.14803pt too wide) in paragraph at lines 179--179
+Overfull \hbox (2.14803pt too wide) in paragraph at lines 184--184
 \T1/qtm/m/n/10 codes.csv| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 []\T1/qtm/m/n/10 -m
  []
 
 
-Overfull \hbox (8.81802pt too wide) in paragraph at lines 179--179
+Overfull \hbox (8.81802pt too wide) in paragraph at lines 184--184
 \T1/qtm/m/n/10 METHOD,
  []
 
@@ -822,7 +824,7 @@ Chapter 3.
 ]
 Chapter 4.
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 3
-40.
+42.
 (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 ) [11] [12
@@ -836,57 +838,57 @@ Chapter 6.
 <pic1.png, id=161, 907.13907pt x 543.53062pt>
 File: pic1.png Graphic file (type png)
 <use pic1.png>
-Package pdftex.def Info: pic1.png  used on input line 429.
+Package pdftex.def Info: pic1.png  used on input line 431.
 (pdftex.def)             Requested size: 376.40381pt x 225.52782pt.
 <pic2.png, id=163, 910.15031pt x 543.53062pt>
 File: pic2.png Graphic file (type png)
 <use pic2.png>
-Package pdftex.def Info: pic2.png  used on input line 441.
+Package pdftex.def Info: pic2.png  used on input line 443.
 (pdftex.def)             Requested size: 376.40381pt x 224.7814pt.
 [15 <./pic1.png>]
 <pic3.png, id=171, 908.64468pt x 545.03625pt>
 File: pic3.png Graphic file (type png)
 <use pic3.png>
-Package pdftex.def Info: pic3.png  used on input line 453.
+Package pdftex.def Info: pic3.png  used on input line 455.
 (pdftex.def)             Requested size: 376.40381pt x 225.77832pt.
 <pic4.png, id=172, 908.64468pt x 545.03625pt>
 File: pic4.png Graphic file (type png)
 <use pic4.png>
-Package pdftex.def Info: pic4.png  used on input line 460.
+Package pdftex.def Info: pic4.png  used on input line 462.
 (pdftex.def)             Requested size: 376.40381pt x 225.77832pt.
 <pic5.png, id=173, 907.13907pt x 544.28343pt>
 File: pic5.png Graphic file (type png)
 <use pic5.png>
-Package pdftex.def Info: pic5.png  used on input line 472.
+Package pdftex.def Info: pic5.png  used on input line 474.
 (pdftex.def)             Requested size: 376.40381pt x 225.8402pt.
 <pic6.png, id=174, 909.3975pt x 545.03625pt>
 File: pic6.png Graphic file (type png)
 <use pic6.png>
-Package pdftex.def Info: pic6.png  used on input line 484.
+Package pdftex.def Info: pic6.png  used on input line 486.
 (pdftex.def)             Requested size: 376.40381pt x 225.59535pt.
 <pic7.png, id=175, 908.64468pt x 545.03625pt>
 File: pic7.png Graphic file (type png)
 <use pic7.png>
-Package pdftex.def Info: pic7.png  used on input line 496.
+Package pdftex.def Info: pic7.png  used on input line 498.
 (pdftex.def)             Requested size: 376.40381pt x 225.77832pt.
  [16 <./pic2.png>] [17 <./pic3.png> <./pic4.png>] [18 <./pic5.png> <./pic6.png>
 ]
 <pic8.png, id=198, 907.89188pt x 545.03625pt>
 File: pic8.png Graphic file (type png)
 <use pic8.png>
-Package pdftex.def Info: pic8.png  used on input line 508.
+Package pdftex.def Info: pic8.png  used on input line 510.
 (pdftex.def)             Requested size: 376.40381pt x 225.9696pt.
  [19 <./pic7.png>] [20 <./pic8.png>]
 Chapter 7.
 <pic9.png, id=211, 374.90062pt x 290.58563pt>
 File: pic9.png Graphic file (type png)
 <use pic9.png>
-Package pdftex.def Info: pic9.png  used on input line 523.
+Package pdftex.def Info: pic9.png  used on input line 525.
 (pdftex.def)             Requested size: 376.40381pt x 291.76878pt.
 <pic10.png, id=212, 375.65344pt x 291.33844pt>
 File: pic10.png Graphic file (type png)
 <use pic10.png>
-Package pdftex.def Info: pic10.png  used on input line 535.
+Package pdftex.def Info: pic10.png  used on input line 537.
 (pdftex.def)             Requested size: 376.40381pt x 291.93785pt.
 [21
 
@@ -894,61 +896,64 @@ Package pdftex.def Info: pic10.png  used on input line 535.
 <pic11.png, id=220, 380.17032pt x 290.58563pt>
 File: pic11.png Graphic file (type png)
 <use pic11.png>
-Package pdftex.def Info: pic11.png  used on input line 547.
+Package pdftex.def Info: pic11.png  used on input line 549.
 (pdftex.def)             Requested size: 376.40381pt x 287.71613pt.
  [22 <./pic10.png>] [23 <./pic11.png>] [24
 
 ]
 Chapter 8.
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 559.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 563.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 566.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 571.
 [25]
 LaTeX Font Info:    Trying to load font information for TS1+txtt on input line 
-668.
+678.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txtt.fd
 File: ts1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 698--702
+Underfull \hbox (badness 10000) in paragraph at lines 711--715
 []\T1/txtt/bx/n/10 method \T1/qtm/m/n/10 (\T1/txtt/m/sl/10 int (optional)\T1/qt
 m/m/n/10 ) ^^U op-tion-ally spec-ify (via a value in
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 857--861
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 888--892
 []\T1/txtt/bx/n/10 method \T1/qtm/m/n/10 (\T1/txtt/m/sl/10 int (optional)\T1/qt
 m/m/n/10 ) ^^U op-tion-ally spec-ify (via a value in
  []
 
-[27] [28] [29]
+[28] [29] [30]
 LaTeX Font Info:    Font shape `TS1/txtt/b/n' in size <10> not available
 (Font)              Font shape `TS1/txtt/bx/n' tried instead on input line 1.
- [30] [31] [32] [33] [34
+ [31] [32] [33] [34] [35
 
-] [35
 
 
 ]
 No file floodtool.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1568.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1568.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1640.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1640.
 (./floodtool.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1568.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1568.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1640.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1640.
 
 Package rerunfilecheck Info: File `floodtool.out' has not changed.
 (rerunfilecheck)             Checksum: BF23AC8F8B31C2AAE6503D449C6213CC;1199.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1568.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1640.
  ) 
 Here is how much of TeX's memory you used:
- 14019 strings out of 483183
- 199467 string characters out of 5966291
- 486487 words of memory out of 5000000
- 28532 multiletter control sequences out of 15000+600000
+ 14033 strings out of 483183
+ 199815 string characters out of 5966293
+ 487746 words of memory out of 5000000
+ 28546 multiletter control sequences out of 15000+600000
  594219 words of font info for 85 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 38i,18n,51p,862b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,18n,51p,862b,669s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/
 enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
@@ -969,7 +974,7 @@ e/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/tcxbtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 txfonts/tcxtt.pfb>
-Output written on floodtool.pdf (39 pages, 4779761 bytes).
+Output written on floodtool.pdf (39 pages, 4780059 bytes).
 PDF statistics:
  420 PDF objects out of 1000 (max. 8388607)
  327 compressed objects within 4 object streams

@@ -60,13 +60,18 @@
 
 
 \title{Flood Tool}
-\date{Dec 17, 2021}
+\date{Jun 03, 2022}
 \release{}
 \author{Team Severn}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{}
 \makeindex
 \begin{document}
+
+\ifdefined\shorthandoff
+  \ifnum\catcode`\=\string=\active\shorthandoff{=}\fi
+  \ifnum\catcode`\"=\active\shorthandoff{"}\fi
+\fi
 
 \pagestyle{empty}
 \sphinxmaketitle
@@ -188,15 +193,13 @@ For historical reasons, multiple coordinate systems exist in in current use in
 British mapping circles. The Ordnance Survey has been mapping the British Isles
 since the 18th Century and the last major retriangulation from 1936\sphinxhyphen{}1962 produced
 the Ordance Survey National Grid (otherwise known as \sphinxstylestrong{OSGB36}), which defined
-latitude and longitude for all points across the island of Great Britain \sphinxstepexplicit %
-\begin{footnote}[1]\phantomsection\label{\thesphinxscope.1}%
-\sphinxAtStartFootnote
+latitude and longitude for all points across the island of Great Britain %
+\begin{footnote}[1]\sphinxAtStartFootnote
 A guide to coordinate systems in Great Britain, Ordnance Survey
 %
 \end{footnote}.
-For convenience, a standard Transverse Mercator projection \sphinxstepexplicit %
-\begin{footnote}[2]\phantomsection\label{\thesphinxscope.2}%
-\sphinxAtStartFootnote
+For convenience, a standard Transverse Mercator projection %
+\begin{footnote}[2]\sphinxAtStartFootnote
 Map projections \sphinxhyphen{} A Working Manual, John P. Snyder, \sphinxurl{https://doi.org/10.3133/pp1395}
 %
 \end{footnote} was also defined,
@@ -236,9 +239,8 @@ F_0 &= 0.9996.\end{split}
 \end{equation*}
 \sphinxAtStartPar
 For a given point on the WGS84 ellipsoid, an approximate mapping to the
-OSGB36 datum can be found using a Helmert transformation \sphinxstepexplicit %
-\begin{footnote}[3]\phantomsection\label{\thesphinxscope.3}%
-\sphinxAtStartFootnote
+OSGB36 datum can be found using a Helmert transformation %
+\begin{footnote}[3]\sphinxAtStartFootnote
 Computing Helmert transformations, G Watson, \sphinxurl{http://www.maths.dundee.ac.uk/gawatson/helmertrev.pdf}
 %
 \end{footnote},
@@ -355,19 +357,19 @@ AdaBoost
 
 \end{itemize}
 \begin{quote}\begin{description}
-\item[{Decision Tree}] \leavevmode
+\sphinxlineitem{Decision Tree}
 \sphinxAtStartPar
 The decision tree classifier (Pang\sphinxhyphen{}Ning et al., 2006) creates the classification model by building a decision tree.Each node in the tree specifies a test on an attribute, each branch descending from that node corresponds to one of the possible values for that attribute.
 
-\item[{K\sphinxhyphen{}Nearest Neighbors}] \leavevmode
+\sphinxlineitem{K\sphinxhyphen{}Nearest Neighbors}
 \sphinxAtStartPar
 In statistics, the k\sphinxhyphen{}nearest neighbors algorithm (k\sphinxhyphen{}NN) is a non\sphinxhyphen{}parametric classification method first developed by Evelyn Fix and Joseph Hodges in 1951, and later expanded by Thomas Cover. It is used for classification and regression. In both cases, the input consists of the k closest training examples in a data set.
 
-\item[{Random Forest}] \leavevmode
+\sphinxlineitem{Random Forest}
 \sphinxAtStartPar
 As the name suggests, “Random Forest is a classifier that contains a number of decision trees on various subsets of the given dataset and takes the average to improve the predictive accuracy of that dataset.” Instead of relying on one decision tree, the random forest takes the prediction from each tree and based on the majority votes of predictions, and it predicts the final output.
 
-\item[{AdaBoost}] \leavevmode
+\sphinxlineitem{AdaBoost}
 \sphinxAtStartPar
 An AdaBoost classifier is a meta\sphinxhyphen{}estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
 
@@ -376,7 +378,7 @@ An AdaBoost classifier is a meta\sphinxhyphen{}estimator that begins by fitting 
 
 \chapter{Regressor choice}
 \label{\detokenize{index:regressor-choice}}\begin{quote}\begin{description}
-\item[{Just like the classifier choice, we provided many trained regressors for users as well}] \leavevmode
+\sphinxlineitem{Just like the classifier choice, we provided many trained regressors for users as well}
 \end{description}\end{quote}
 \begin{itemize}
 \item {} 
@@ -397,19 +399,19 @@ Supprot Vector Regressor
 
 \end{itemize}
 \begin{quote}\begin{description}
-\item[{Linear Regression}] \leavevmode
+\sphinxlineitem{Linear Regression}
 \sphinxAtStartPar
 In statistics, linear regression is a linear approach for modelling the relationship between a scalar response and one or more explanatory variables. The case of one explanatory variable is called simple linear regression; for more than one, the process is called multiple linear regression.
 
-\item[{Decision Tree Regressor}] \leavevmode
+\sphinxlineitem{Decision Tree Regressor}
 \sphinxAtStartPar
 Decision tree builds regression or classification models in the form of a tree structure. It breaks down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes.
 
-\item[{Random Forest Regressor}] \leavevmode
+\sphinxlineitem{Random Forest Regressor}
 \sphinxAtStartPar
 Random Forest Regression is a supervised learning algorithm that uses ensemble learning method for regression. Ensemble learning method is a technique that combines predictions from multiple machine learning algorithms to make a more accurate prediction than a single model.
 
-\item[{Supprot Vector Regressor}] \leavevmode
+\sphinxlineitem{Supprot Vector Regressor}
 \sphinxAtStartPar
 Support Vector Regression is a supervised learning algorithm that is used to predict discrete values. Support Vector Regression uses the same principle as the SVMs. The basic idea behind SVR is to find the best fit line. In SVR, the best fit line is the hyperplane that has the maximum number of points.
 
@@ -556,11 +558,14 @@ Python flood risk analysis tool
 \index{Tool (class in flood\_tool)@\spxentry{Tool}\spxextra{class in flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class\DUrole{w}{  }}}\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{Tool}}}{\emph{\DUrole{n}{postcode\_file}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}, \emph{\DUrole{n}{sample\_labels}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}, \emph{\DUrole{n}{household\_file}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class\DUrole{w}{  }}}\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{Tool}}}{\emph{\DUrole{n}{postcode\_file}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}, \emph{\DUrole{n}{sample\_labels}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}, \emph{\DUrole{n}{household\_file}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}\textquotesingle{}}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Class to interact with a postcode database file.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcode\_file}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}\sphinxstyleliteralemphasis{\sphinxupquote{, }}\sphinxstyleliteralemphasis{\sphinxupquote{optional}}) \textendash{} Filename of a .csv file containing geographic location
@@ -582,12 +587,15 @@ by postcode.
 \index{get\_annual\_flood\_risk() (flood\_tool.Tool method)@\spxentry{get\_annual\_flood\_risk()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_annual_flood_risk}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_annual\_flood\_risk}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{risk\_labels}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_annual_flood_risk}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_annual\_flood\_risk}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{risk\_labels}\DUrole{o}{=}\DUrole{default_value}{None}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Risk is defined here as a damage coefficient multiplied by the
 value under threat multiplied by the probability of an event.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
@@ -599,11 +607,11 @@ predicted by get\_flood\_probability.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 Series of total annual flood risk estimates indexed by locations.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.Series
 
@@ -614,16 +622,15 @@ pandas.Series
 \index{get\_combined\_data() (flood\_tool.Tool method)@\spxentry{get\_combined\_data()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_combined_data}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_combined\_data}}}{}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_combined_data}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_combined\_data}}}{}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get lat, log, flood\_prob and annual\_flood\_risk from unlabelled
 postcode file
 \begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
-\sphinxAtStartPar
-
-
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.DataFrame
 
@@ -642,22 +649,25 @@ pandas.DataFrame
 \index{get\_easting\_northing() (flood\_tool.Tool method)@\spxentry{get\_easting\_northing()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_easting_northing}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_easting\_northing}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_easting_northing}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_easting\_northing}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get a frame of OS eastings and northings from a collection
 of input postcodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 DataFrame containing only OSGB36 easthing and northing indexed
 by the input postcodes. Invalid postcodes (i.e. not in the
 input unlabelled postcodes file) return as NaN.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.DataFrame
 
@@ -684,12 +694,15 @@ pandas.DataFrame
 \index{get\_flood\_class() (flood\_tool.Tool method)@\spxentry{get\_flood\_class()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_flood\_class}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{method}\DUrole{o}{=}\DUrole{default_value}{0}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_flood\_class}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{method}\DUrole{o}{=}\DUrole{default_value}{0}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Generate series predicting flood probability classification
 for a collection of poscodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
@@ -702,11 +715,11 @@ method to be used.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 Series of flood risk classification labels indexed by postcodes.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.Series
 
@@ -717,14 +730,17 @@ pandas.Series
 \index{get\_flood\_class\_methods() (flood\_tool.Tool static method)@\spxentry{get\_flood\_class\_methods()}\spxextra{flood\_tool.Tool static method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class_methods}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_flood\_class\_methods}}}{}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class_methods}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_flood\_class\_methods}}}{}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get a dictionary of available flood probablity classification methods.
 \begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{description}
-\item[{Dictionary mapping classification method names (which have}] \leavevmode
+\sphinxlineitem{Dictionary mapping classification method names (which have}
 \sphinxAtStartPar
 no inate meaning) on to an identifier to be passed to the
 get\_flood\_probability method.
@@ -732,7 +748,7 @@ get\_flood\_probability method.
 \end{description}
 
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 dict
 
@@ -743,12 +759,15 @@ dict
 \index{get\_flood\_class\_models() (flood\_tool.Tool static method)@\spxentry{get\_flood\_class\_models()}\spxextra{flood\_tool.Tool static method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class_models}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_flood\_class\_models}}}{}{}~\begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_flood_class_models}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_flood\_class\_models}}}{}{}
+\pysigstopsignatures\begin{quote}\begin{description}
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 method to model
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Dict
 
@@ -759,14 +778,17 @@ Dict
 \index{get\_house\_price\_methods() (flood\_tool.Tool static method)@\spxentry{get\_house\_price\_methods()}\spxextra{flood\_tool.Tool static method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_house_price_methods}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_house\_price\_methods}}}{}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_house_price_methods}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_house\_price\_methods}}}{}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get a dictionary of available flood house price regression methods.
 \begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{description}
-\item[{Dictionary mapping regression method names (which have}] \leavevmode
+\sphinxlineitem{Dictionary mapping regression method names (which have}
 \sphinxAtStartPar
 no inate meaning) on to an identifier to be passed to the
 get\_median\_house\_price\_estimate method.
@@ -774,7 +796,7 @@ get\_median\_house\_price\_estimate method.
 \end{description}
 
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 dict
 
@@ -785,12 +807,15 @@ dict
 \index{get\_house\_price\_models() (flood\_tool.Tool static method)@\spxentry{get\_house\_price\_models()}\spxextra{flood\_tool.Tool static method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_house_price_models}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_house\_price\_models}}}{}{}~\begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_house_price_models}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{static\DUrole{w}{  }}}\sphinxbfcode{\sphinxupquote{get\_house\_price\_models}}}{}{}
+\pysigstopsignatures\begin{quote}\begin{description}
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 method to model
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Dict
 
@@ -801,22 +826,25 @@ Dict
 \index{get\_lat\_long() (flood\_tool.Tool method)@\spxentry{get\_lat\_long()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_lat_long}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_lat\_long}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_lat_long}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_lat\_long}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get a frame containing GPS latitude and longitude information for a
 collection of of postcodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 DataFrame containing only WGS84 latitude and longitude pairs for
 the input postcodes. Invalid postcodes (i.e. not in the
 input unlabelled postcodes file) return as NAN.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.DataFrame
 
@@ -843,12 +871,15 @@ pandas.DataFrame
 \index{get\_median\_house\_price\_estimate() (flood\_tool.Tool method)@\spxentry{get\_median\_house\_price\_estimate()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_median_house_price_estimate}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_median\_house\_price\_estimate}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{method}\DUrole{o}{=}\DUrole{default_value}{0}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_median_house_price_estimate}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_median\_house\_price\_estimate}}}{\emph{\DUrole{n}{postcodes}}, \emph{\DUrole{n}{method}\DUrole{o}{=}\DUrole{default_value}{0}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Generate series predicting median house price for a collection
 of poscodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
@@ -861,11 +892,11 @@ method to be used.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 Series of median house price estimates indexed by postcodes.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.Series
 
@@ -876,22 +907,25 @@ pandas.Series
 \index{get\_postcode\_from\_sector() (flood\_tool.Tool method)@\spxentry{get\_postcode\_from\_sector()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_postcode_from_sector}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_postcode\_from\_sector}}}{\emph{\DUrole{n}{sectors}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_postcode_from_sector}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_postcode\_from\_sector}}}{\emph{\DUrole{n}{sectors}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get a frame of postcodes from a collection
 of input sectors.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of sectors.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 DataFrame containing only OSGB36 easthing and northing indexed
 by the input sectors. Invalid sectors (i.e. not in the
 input unlabelled postcodes file) return as NaN.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.DataFrame
 
@@ -902,20 +936,23 @@ pandas.DataFrame
 \index{get\_total\_value() (flood\_tool.Tool method)@\spxentry{get\_total\_value()}\spxextra{flood\_tool.Tool method}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.Tool.get_total_value}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_total\_value}}}{\emph{\DUrole{n}{locations}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.Tool.get_total_value}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{get\_total\_value}}}{\emph{\DUrole{n}{locations}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return a series of estimates of the total property values
 of a collection of postcode units or sectors.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{locations}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcode units or sectors
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 Series of total property value estimates indexed by locations.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 pandas.Series
 
@@ -929,12 +966,15 @@ pandas.Series
 \index{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_closest_station_ref_by_type_from_lat_lng}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}, \emph{\DUrole{n}{s\_type}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}rainfall\textquotesingle{}}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_closest_station_ref_by_type_from_lat_lng}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_closest\_station\_ref\_by\_type\_from\_lat\_lng}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}, \emph{\DUrole{n}{s\_type}\DUrole{o}{=}\DUrole{default_value}{\textquotesingle{}rainfall\textquotesingle{}}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return stationReference (rainfall or level) where the station is
 closest to the given lat, lng.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{lat}} (\sphinxstyleliteralemphasis{\sphinxupquote{float}}) \textendash{} latitude
@@ -949,7 +989,7 @@ closest to the given lat, lng.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -975,12 +1015,15 @@ closest to the given lat, lng.
 \index{get\_closest\_station\_ref\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_closest\_station\_ref\_from\_lat\_lng()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_closest_station_ref_from_lat_lng}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_closest\_station\_ref\_from\_lat\_lng}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_closest_station_ref_from_lat_lng}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_closest\_station\_ref\_from\_lat\_lng}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return stationReference where the station is
 closest to the given lat, lng.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{lat}} (\sphinxstyleliteralemphasis{\sphinxupquote{float}}) \textendash{} latitude
@@ -991,7 +1034,7 @@ closest to the given lat, lng.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1017,12 +1060,15 @@ closest to the given lat, lng.
 \index{get\_easting\_northing\_from\_gps\_lat\_long() (in module flood\_tool)@\spxentry{get\_easting\_northing\_from\_gps\_lat\_long()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_easting_northing_from_gps_lat_long}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_easting\_northing\_from\_gps\_lat\_long}}}{\emph{\DUrole{n}{phi}}, \emph{\DUrole{n}{lam}}, \emph{\DUrole{n}{rads}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_easting_northing_from_gps_lat_long}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_easting\_northing\_from\_gps\_lat\_long}}}{\emph{\DUrole{n}{phi}}, \emph{\DUrole{n}{lam}}, \emph{\DUrole{n}{rads}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get OSGB36 easting/northing from GPS latitude and
 longitude pairs.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{phi}} (\sphinxstyleliteralemphasis{\sphinxupquote{float/arraylike}}) \textendash{} GPS (i.e. WGS84 datum) latitude value(s)
@@ -1037,7 +1083,7 @@ longitude pairs.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1071,12 +1117,15 @@ See also \sphinxurl{https://webapps.bgs.ac.uk/data/webservices/convertForm.cfm}
 \index{get\_gps\_lat\_long\_from\_easting\_northing() (in module flood\_tool)@\spxentry{get\_gps\_lat\_long\_from\_easting\_northing()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_gps_lat_long_from_easting_northing}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_gps\_lat\_long\_from\_easting\_northing}}}{\emph{\DUrole{n}{east}}, \emph{\DUrole{n}{north}}, \emph{\DUrole{n}{rads}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{dms}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_gps_lat_long_from_easting_northing}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_gps\_lat\_long\_from\_easting\_northing}}}{\emph{\DUrole{n}{east}}, \emph{\DUrole{n}{north}}, \emph{\DUrole{n}{rads}\DUrole{o}{=}\DUrole{default_value}{False}}, \emph{\DUrole{n}{dms}\DUrole{o}{=}\DUrole{default_value}{False}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get OSGB36 easting/northing from GPS latitude and
 longitude pairs.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{east}} (\sphinxstyleliteralemphasis{\sphinxupquote{float/arraylike}}) \textendash{} OSGB36 easting value(s) (in m).
@@ -1096,7 +1145,7 @@ with rads option.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1130,7 +1179,10 @@ See also \sphinxurl{https://webapps.bgs.ac.uk/data/webservices/convertForm.cfm}
 \index{get\_grouped\_reading() (in module flood\_tool)@\spxentry{get\_grouped\_reading()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_grouped_reading}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_grouped\_reading}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{parameter}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_grouped_reading}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_grouped\_reading}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{parameter}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get sum of rainfall / max water level indexed by station reference
 \subsubsection*{Example}
@@ -1155,12 +1207,15 @@ stationReference
 \index{get\_rainfall\_classifier\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_rainfall\_classifier\_from\_lat\_lng()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_rainfall_classifier_from_lat_lng}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_rainfall\_classifier\_from\_lat\_lng}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_rainfall_classifier_from_lat_lng}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_rainfall\_classifier\_from\_lat\_lng}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return rainfall class of the station
 that is the closest to the given lat, lng.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{lat}} (\sphinxstyleliteralemphasis{\sphinxupquote{float}}) \textendash{} latitude
@@ -1171,7 +1226,7 @@ that is the closest to the given lat, lng.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1192,12 +1247,15 @@ that is the closest to the given lat, lng.
 \index{get\_rainfall\_riverlevel\_from\_lat\_lng() (in module flood\_tool)@\spxentry{get\_rainfall\_riverlevel\_from\_lat\_lng()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_rainfall_riverlevel_from_lat_lng}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_rainfall\_riverlevel\_from\_lat\_lng}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_rainfall_riverlevel_from_lat_lng}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_rainfall\_riverlevel\_from\_lat\_lng}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lng}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return total rainfall and max river level where given the
 latitude and longitude in a day.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{filename}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} typical\_day or wet\_day
@@ -1212,7 +1270,7 @@ latitude and longitude in a day.
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1238,11 +1296,14 @@ latitude and longitude in a day.
 \index{get\_station\_data() (in module flood\_tool)@\spxentry{get\_station\_data()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_station_data}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_station\_data}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{station\_reference}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_station_data}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_station\_data}}}{\emph{\DUrole{n}{filename}}, \emph{\DUrole{n}{station\_reference}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Return readings for a specified recording station from .csv file.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{filename}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} filename to read
@@ -1264,12 +1325,15 @@ Return readings for a specified recording station from .csv file.
 \index{get\_station\_reading() (in module flood\_tool)@\spxentry{get\_station\_reading()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.get_station_reading}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_station\_reading}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{parameter}}, \emph{\DUrole{n}{station\_ref}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.get_station_reading}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{get\_station\_reading}}}{\emph{\DUrole{n}{file}}, \emph{\DUrole{n}{parameter}}, \emph{\DUrole{n}{station\_ref}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Get rainfall or water level data for a list of staions.
 Return DataFrame indexed by dateTime, with station name as the column names.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{file}} (\sphinxstyleliteralemphasis{\sphinxupquote{str}}) \textendash{} filename / path of the rainfall \& water level reading file
@@ -1299,16 +1363,19 @@ Return DataFrame indexed by dateTime, with station name as the column names.
 \index{plot\_24h\_rainfall() (in module flood\_tool)@\spxentry{plot\_24h\_rainfall()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_24h_rainfall}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_24h\_rainfall}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_24h_rainfall}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_24h\_rainfall}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot rainfall level heatmap for the nearest station of the specific postcodes with a
 24 hour timeline, rainfall level data acquired from wet\_day.csv
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcode}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1334,11 +1401,14 @@ Plot rainfall level heatmap for the nearest station of the specific postcodes wi
 \index{plot\_circle() (in module flood\_tool)@\spxentry{plot\_circle()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_circle}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_circle}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lon}}, \emph{\DUrole{n}{radius}}, \emph{\DUrole{n}{map}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_circle}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_circle}}}{\emph{\DUrole{n}{lat}}, \emph{\DUrole{n}{lon}}, \emph{\DUrole{n}{radius}}, \emph{\DUrole{n}{map}\DUrole{o}{=}\DUrole{default_value}{None}}, \emph{\DUrole{o}{**}\DUrole{n}{kwargs}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot a circle on a map (creating a new folium map instance if necessary).
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode\begin{itemize}
+\sphinxlineitem{Parameters}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{lat}} (\sphinxstyleliteralemphasis{\sphinxupquote{float}}) \textendash{} latitude of circle to plot (degrees)
@@ -1357,11 +1427,7 @@ Plot a circle on a map (creating a new folium map instance if necessary).
 
 \end{itemize}
 
-\item[{Returns}] \leavevmode
-\sphinxAtStartPar
-
-
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Folium map object
 
@@ -1378,20 +1444,23 @@ Folium map object
 \index{plot\_flood\_prob\_level\_with\_given\_postcode() (in module flood\_tool)@\spxentry{plot\_flood\_prob\_level\_with\_given\_postcode()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_flood_prob_level_with_given_postcode}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_flood\_prob\_level\_with\_given\_postcode}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_flood_prob_level_with_given_postcode}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_flood\_prob\_level\_with\_given\_postcode}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot flood probability map from given list of postcodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcode}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 Different colours of circle markers show
 different flood probabilities.
 
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Folium map object
 
@@ -1407,15 +1476,14 @@ Folium map object
 \index{plot\_flood\_prob\_sampled() (in module flood\_tool)@\spxentry{plot\_flood\_prob\_sampled()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_flood_prob_sampled}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_flood\_prob\_sampled}}}{}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_flood_prob_sampled}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_flood\_prob\_sampled}}}{}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot flood probability map from given sampled csv
 \begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
-\sphinxAtStartPar
-
-
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Folium map object
 
@@ -1431,20 +1499,19 @@ Folium map object
 \index{plot\_heatmap() (in module flood\_tool)@\spxentry{plot\_heatmap()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_heatmap}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_heatmap}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_heatmap}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_heatmap}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot heatmap of max river level and total rainfall in a day
 from a given sequence of postcodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of string}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
-\sphinxAtStartPar
-
-
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Folium heatmap object
 
@@ -1460,15 +1527,18 @@ Folium heatmap object
 \index{plot\_house\_price() (in module flood\_tool)@\spxentry{plot\_house\_price()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_house_price}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_house\_price}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_house_price}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_house\_price}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot house price map from given list of postcodes.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcode}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of strs}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
@@ -1494,15 +1564,14 @@ Plot house price map from given list of postcodes.
 \index{plot\_house\_price\_sampled() (in module flood\_tool)@\spxentry{plot\_house\_price\_sampled()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_house_price_sampled}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_house\_price\_sampled}}}{}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_house_price_sampled}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_house\_price\_sampled}}}{}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot house price map from given sampled csv
 \begin{quote}\begin{description}
-\item[{Returns}] \leavevmode
-\sphinxAtStartPar
-
-
-\item[{Return type}] \leavevmode
+\sphinxlineitem{Return type}
 \sphinxAtStartPar
 Folium map object
 
@@ -1518,15 +1587,18 @@ Folium map object
 \index{plot\_popping() (in module flood\_tool)@\spxentry{plot\_popping()}\spxextra{in module flood\_tool}}
 
 \begin{fulllineitems}
-\phantomsection\label{\detokenize{index:flood_tool.plot_popping}}\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_popping}}}{\emph{\DUrole{n}{postcodes}}}{}
+\phantomsection\label{\detokenize{index:flood_tool.plot_popping}}
+\pysigstartsignatures
+\pysiglinewithargsret{\sphinxcode{\sphinxupquote{flood\_tool.}}\sphinxbfcode{\sphinxupquote{plot\_popping}}}{\emph{\DUrole{n}{postcodes}}}{}
+\pysigstopsignatures
 \sphinxAtStartPar
 Plot popping up window displaying all information required.
 \begin{quote}\begin{description}
-\item[{Parameters}] \leavevmode
+\sphinxlineitem{Parameters}
 \sphinxAtStartPar
 \sphinxstyleliteralstrong{\sphinxupquote{postcodes}} (\sphinxstyleliteralemphasis{\sphinxupquote{sequence of string}}) \textendash{} Sequence of postcodes.
 
-\item[{Returns}] \leavevmode
+\sphinxlineitem{Returns}
 \sphinxAtStartPar
 \begin{itemize}
 \item {} 
